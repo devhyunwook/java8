@@ -1,19 +1,9 @@
 package com.devhwkang.java8;
 
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Predicate;
-import java.util.function.Supplier;
-import java.util.function.UnaryOperator;
+import java.util.function.*;
 
 public class Foo {
     public static void main(String[] args) {
-        /**
-         * PART 3
-         */
-        System.out.println("================================================================================");
-        System.out.println("== PART3");
-
         /**
          * PART 2
          */
@@ -59,5 +49,28 @@ public class Foo {
         };
         System.out.println(runSomething.doIt(1));
 
+    }
+
+    private void run() {
+        int baseNumber = 10;
+
+        // 로컬 클래스
+        class LocalClass {
+            void printBaseNumber() {
+                System.out.println(baseNumber);
+            }
+        }
+
+        // 익명 클래스
+        Consumer<Integer> integerConsumer = new Consumer<Integer>() {
+            @Override
+            public void accept(Integer integer) {
+                System.out.println(baseNumber);
+            }
+        };
+
+        // 람다
+        IntConsumer printInt = (i) -> System.out.println(i + baseNumber);
+        printInt.accept(10);
     }
 }
