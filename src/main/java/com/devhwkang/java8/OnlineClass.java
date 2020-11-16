@@ -7,6 +7,8 @@ public class OnlineClass {
 
     private boolean closed;
 
+    private Progress progress;
+
     public OnlineClass(Integer id, String title, boolean closed) {
         this.id = id;
         this.title = title;
@@ -23,5 +25,13 @@ public class OnlineClass {
 
     public boolean isClosed() {
         return this.closed;
+    }
+
+    public void setProgress(Progress progress) {
+        this.progress = progress;
+    }
+
+    public Progress getProgress() {
+        return this.progress;
     }
 }

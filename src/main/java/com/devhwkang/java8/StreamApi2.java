@@ -13,7 +13,7 @@ public class StreamApi2 {
         springClasses.add(new OnlineClass(2, "spring data jpa", true));
         springClasses.add(new OnlineClass(3, "spring mvc", false));
         springClasses.add(new OnlineClass(4, "spring core", false));
-        springClasses.add(new OnlineClass(5, "spring api development", false));
+        springClasses.add(new OnlineClass(5, "rest api development", false));
 
         System.out.println("1. spring으로 시작하는 수업");
         springClasses.stream()
